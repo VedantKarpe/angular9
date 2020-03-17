@@ -1,0 +1,10 @@
+<p>OnChange Component - Primitive {{newValue}}</p>
+<p>OnChange Component - Object Hero {{hero.name}}</p>
+<!-- <p>OnChange Component - array  {{numArray}}</p> -->
+
+
+<div *ngFor="let item of numArray">
+    <p>{{item}}</p>
+</div>
+
+<button (click)="refresh()">Refresh</button>

@@ -1,3 +1,43 @@
-<section>
-  <mat-checkbox >CheckBox</mat-checkbox>
-</section>
+<h1 style="padding: 30px;">Inspect Console</h1>
+
+<div class="container">
+
+  <h4> Ng On Changes LifeCycle Hooks</h4>
+  <button (click)="incrementNumber();"> IncrementNumber</button>
+  <p>AppComponent - Primitive {{number}}</p>
+
+  <!-- <button (click)="updateObject();"> updateObject</button> -->
+  <input [(ngModel)]="hero.name">
+  <p>AppComponent Component - Object Hero {{hero.name}}</p>
+
+  <input #newNumber type="text" placeholder="Enter a new number">
+  <button (click)="addNumber(newNumber.value)">Add Number</button>
+
+  <app-on-change [newValue]="number" [hero]="hero" [numArray]="numberArray"></app-on-change>
+  <p>Check on uncommenting onPush in OnChange Component</p>
+
+</div>
+
+<div class="container">
+  <h4> DoCheck LifeCycle Hooks</h4>
+  <app-do-check></app-do-check>
+</div>
+
+<div class="container">
+  <h4> After View Init and Checked LifeCycle Hooks</h4>
+  <div>
+    <app-viewchild-demo></app-viewchild-demo>
+  </div>
+</div>
+
+
+<div class="container">
+  <h4> After Content Init and Content LifeCycle Hooks</h4>
+  <div>
+    <app-content-parent-demo>
+        <app-contentchild-demo></app-contentchild-demo>
+    </app-content-parent-demo>
+  </div>
+</div>
+
+
